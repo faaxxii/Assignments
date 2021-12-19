@@ -1,0 +1,8 @@
+DECLARE num: INTEGER
+num <- 0
+
+INPUT "Enter number of donuts", num
+IF num > 10 
+THEN OUTPUT "Number of donuts are: many"
+ELSE OUTPUT "Number of donuts are", num
+END IF
