@@ -1,0 +1,27 @@
+Dim str1 As String
+        Dim x As String
+        Dim i As Integer
+        Dim y As Char
+        Dim flag As Boolean
+
+        flag = True
+        str1 = " "
+        x = " "
+        i = 0
+        y = " "
+
+        Console.Write("Enter your sentence: ")
+        str1 = Console.ReadLine
+        x = UCase(str1)
+        For i = 1 To Len(x)
+            y = Mid(x, i, 1)
+            If Asc(y) < 65 Or Asc(y) > 90 Then
+                i = Len(x)
+                flag = False
+                Console.WriteLine("Entered string contains characters other than alphabets")
+            End If
+        Next
+        If flag = True Then
+            Console.WriteLine("Entered string contains alphabets")
+        End If
+        Console.ReadKey()
