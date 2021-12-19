@@ -1,0 +1,26 @@
+        DECLARE str1: String
+        DECLARE str2: String
+        DECLARE char1: Char
+        DECLARE char2: Char
+        DECLARE char3: Char
+        DECLARE count: Integer
+
+        count <- 0
+        str1 <- ""
+        str2 <- ""
+        Char3 <- ""
+        Char2 <- ""
+        char1 <- ""
+
+        INPUT "Enter your sentence: ", str1 
+        INPUT "Enter character you want to replace: ", char1
+        INPUT "Enter character you want to replace it with: ", char2
+
+        For count <- 1 To Len(str1)
+            char3 <- Mid(str1, count, 1)
+            If Asc(char3) = Asc(char1) Then
+                str2 <- str2 & char2
+            Else : str2 <- str2 & char3
+            End If
+        Next
+        OUTPUT "Your new results are: ", str2

@@ -1,0 +1,29 @@
+        Dim str1, str2 As String
+        Dim char1, char2, char3 As Char
+        Dim count As Integer
+
+        count = 0
+        str1 = ""
+        str2 = ""
+        Char3 = ""
+        Char2 = ""
+        char1 = ""
+
+        Console.Write("Enter your sentence: ")
+        str1 = Console.ReadLine
+
+        Console.Write("Enter character you want to replace: ")
+        char1 = Console.ReadLine
+
+        Console.Write("Enter character you want to replace it with: ")
+        char2 = Console.ReadLine
+
+        For count = 1 To Len(str1)
+            char3 = Mid(str1, count, 1)
+            If Asc(char3) = Asc(char1) Then
+                str2 = str2 & char2
+            Else : str2 = str2 & char3
+            End If
+        Next
+        Console.WriteLine("Your new results are: " & str2)
+        Console.ReadKey()
