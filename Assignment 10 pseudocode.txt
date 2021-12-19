@@ -1,0 +1,20 @@
+        DECLARE str1, str2: String
+        DECLARE x, y: Char
+        DECLARE i: Integer
+        str1 <- ""
+        str2 <- ""
+        x <- ''
+        y <- ''
+        i <- 0
+
+        OUTPUT "Enter string: ", str1
+        x <- Left(str1, 1)
+        str2 <- x
+        For i <- 2 To Len(str1)
+            y <- Mid(str1, i, 1)
+            If x = y Then
+                str2 <- str2 & '*'
+            Else : str2 <- str2 & y
+            End If
+        Next
+        OUTPUT str2

@@ -1,0 +1,22 @@
+   Dim str1, str2 As String
+        Dim x, y As Char
+        Dim i As Integer
+        str1 = ""
+        str2 = ""
+        x = ""
+        y = ""
+        i = 0
+
+        Console.Write("Enter string: ")
+        str1 = Console.ReadLine
+        x = Left(str1, 1)
+        str2 = x
+        For i = 2 To Len(str1)
+            y = Mid(str1, i, 1)
+            If x = y Then
+                str2 = str2 & "*"
+            Else : str2 = str2 & y
+            End If
+        Next
+        Console.WriteLine("" & str2)
+        Console.ReadKey()
