@@ -1,0 +1,15 @@
+
+DECLARE str1, str2, x, y: STRING
+str1 <- ""
+str2 <- ""
+x <- ""
+y <- ""
+
+INPUT "Enter your string: ", str1
+IF LEN(str1) > 4 
+  x <- LEFT(str1,2)
+  y <- RIGHT(str1,2)
+ ELSE OUTPUT str1
+END IF
+str2 <- x & y
+OUTPUT str2

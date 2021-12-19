@@ -1,0 +1,16 @@
+     Dim str1, str2, x, y As String
+     str1 = ""
+     str2 = ""
+     x = ""
+     y = ""
+     Console.Write("Enter your string: ")
+     str1 = Console.ReadLine
+     If Len(str1) < 4 Then
+         Console.WriteLine("" & str1)
+     ElseIf Len(str1) > 4 Then
+         x = Left(str1, 2)
+         y = Right(str1, 2)
+     End If
+     str2 = x & y
+     Console.WriteLine("" & str2)
+     Console.ReadKey()
