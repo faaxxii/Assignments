@@ -1,0 +1,23 @@
+        DECLARE str1: String
+        DECLARE word1: String
+        DECLARE word2: String
+        DECLARE i: Integer
+        DECLARE f: Integer
+        DECLARE m: Integer
+
+        str1 <- ""
+        word1 <- ""
+        word2 <- ""
+        f <- 0
+        m <- 0
+        i <- 0
+
+        OUTPUT "Input String: ", str1
+
+        f <- InStr(str1, "not")
+        f <- f - 1
+        word1 <- Left(str1, f)
+        m <- InStr(Str1, "bad")
+        word2 <- Right(str1, Len(str1) - m - 2)
+
+        OUTPUT "Your Final String is: ", word1, "good", word2

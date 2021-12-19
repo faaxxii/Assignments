@@ -1,0 +1,25 @@
+        Dim str1 As String
+        Dim word1 As String
+        Dim word2 As String
+        Dim i As Integer
+        Dim f As Integer
+        Dim m As Integer
+
+        str1 = ""
+        word1 = ""
+        word2 = ""
+        f = 0
+        m = 0
+        i = 0
+
+        Console.Write("Input String: ")
+        str1 = Console.ReadLine
+
+        f = InStr(str1, "not")
+        f = f - 1
+        word1 = Left(str1, f)
+        m = InStr(Str1, "bad")
+        word2 = Right(str1, Len(str1) - m - 2)
+
+        Console.WriteLine("Your Final String is: " & word1 & "good" & word2)
+        Console.ReadKey()
