@@ -1,0 +1,36 @@
+        Dim str1 As String
+        Dim i, x, charc, rep As Integer
+        Dim char1, char2, again As Char
+
+        str1 = ""
+        i = 0
+        char1 = ""
+        x = 0
+        char2 = ""
+        charc = 0
+        rep = 0
+        again = ""
+
+        Console.Write("Enter String: ")
+        str1 = Console.ReadLine
+        str1 = LCase(str1)
+
+        For i = 1 To Len(str1)
+            char1 = Mid(str1, i, 1)
+
+            For x = 1 To Len(str1)
+                char2 = Mid(str1, x, 1)
+                If char1 = char2 Then
+                    charc = charc + 1
+                End If
+                If charc > rep Then
+                    rep = charc
+                    again = char1
+                End If
+            Next x
+            charc = 0
+        Next i
+
+        Console.WriteLine("most repeated character: " & again)
+        Console.WriteLine("number of times repeated: " & rep - 1)
+        Console.ReadKey()
