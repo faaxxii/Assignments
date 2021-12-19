@@ -1,0 +1,48 @@
+        Dim a, e, i, o, u, c, count As Integer
+        Dim str1, str2 As String
+        Dim m As Char
+
+        a = 0
+        e = 0
+        i = 0
+        o = 0
+        u = 0
+        c = 0
+        str1 = ""
+        str2 = ""
+        m = ""
+        count = 0
+        
+
+        Console.Write("Enter your string: ")
+        str1 = Console.ReadLine
+        str2 = UCase(str1)
+
+        For c = 1 To Len(str2)
+            m = Mid(str2, c, 1)
+            If m = "A" Or m = "E" Or m = "I" Or m = "O" Or m = "U" Then
+                count = count + 1
+            End If
+            If m = "A" Then
+                a = a + 1
+            End If
+            If m = "E" Then
+                e = e + 1
+            End If
+            If m = "I" Then
+                i = i + 1
+            End If
+            If m = "O" Then
+                o = o + 1
+            End If
+            If m = "U" Then
+                u = u + 1
+            End If
+        Next
+        Console.WriteLine("Total vowels are: " & count)
+        Console.WriteLine("Total A's are " & a)
+        Console.WriteLine("Total E's are " & e)
+        Console.WriteLine("Total I's are " & i)
+        Console.WriteLine("Total O's are " & o)
+        Console.WriteLine("Total U's are " & u)
+        Console.ReadKey()

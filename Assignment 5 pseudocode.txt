@@ -1,0 +1,46 @@
+        DECLARE a, e, i, o, u, c, count: Integer
+        DECLARE str1, str2: String
+        DECLARE m: Char
+
+        a <- 0
+        e <- 0
+        i <- 0
+        o <- 0
+        u <- 0
+        c <- 0
+        str1 <- ""
+        str2 <- ""
+        m <- ''
+        count <- 0
+        
+
+        INPUT "Enter your string: ", str1
+        str2 <- UCase(str1)
+
+        For c <- 1 To Len(str2)
+            m = Mid(str2, c, 1)
+            If m = "A" Or m = "E" Or m = "I" Or m = "O" Or m = "U" Then
+                count <- count + 1
+            End If
+            If m = "A" Then
+                a <- a + 1
+            End If
+            If m = "E" Then
+                e <- e + 1
+            End If
+            If m = "I" Then
+                i <- i + 1
+            End If
+            If m = "O" Then
+                o <- o + 1
+            End If
+            If m = "U" Then
+                u <- u + 1
+            End If
+        Next
+        OUTPUT "Total vowels are: ", count
+        OUTPUT "Total A's are ", a
+        OUTPUT "Total E's are ", e
+        OUTPUT "Total I's are ", i
+        OUTPUT "Total O's are ", o
+        OUTPUT "Total U's are ", u
