@@ -1,0 +1,38 @@
+        DECLARE str1: String
+        DECLARE char1, y: Char
+        DECLARE x, alpha, num, other, count: Integer
+        str1 <- ""
+        char1 <- ""
+        y <- ""
+        x <- 0
+        alpha <- 0
+        num <- 0
+        other <- 0
+        count <- 0
+
+        INPUT "Enter your string: ", str1
+        str1 = UCase(str1)
+
+        INPUT "Enter character you want to count: ", char1
+        char1 = UCase(char1)
+
+        For count = 1 To LEN(str1)
+            y = Mid(str1, count, 1)
+            If char1 = y Then
+                x <- x + 1
+            End If
+        Next
+        For count = 1 To Len(str1)
+            y = Mid(str1, count, 1)
+            If Asc(y) > 64 And Asc(y) < 91 Then
+                alpha = alpha + 1
+            ElseIf Asc(y) > 47 And Asc(y) < 58 Then
+                num <- num + 1
+            ElseIf Asc(y) < 48 Or Asc(y) > 57 And Asc(y) < 65 Or Asc(y) > 90 Then
+                other <- other + 1
+            End If
+        Next
+        OUTPUT "Total characters are: ", x
+        OUTPUT "Total alphabets are: ", alpha
+        OUTPUT "Total numbers are: ", num
+        OUTPUT "Total other characters are: ", other
