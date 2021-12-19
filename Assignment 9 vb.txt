@@ -1,0 +1,24 @@
+        Dim str1, str2, str3, char1, char2, new1, new2 As String
+        str1 = ""
+        str2 = ""
+        str3 = ""
+        char1 = ""
+        char2 = ""
+        new1 = ""
+        new2 = ""
+
+        Console.Write("Enter your string: ")
+        str1 = Console.ReadLine
+        Console.Write("Enter your second string: ")
+        str2 = Console.ReadLine
+
+        If Len(str1) > 2 And Len(str2) > 2 Then
+            char1 = Left(str1, 2)
+            char2 = Left(str2, 2)
+            new1 = char2 & Right(str1, Len(str1) - 2)
+            new2 = char1 & Right(str2, Len(str2) - 2)
+            str3 = new1 & " " & new2
+        End If
+        Console.WriteLine("" & str3)
+
+        Console.ReadKey()
